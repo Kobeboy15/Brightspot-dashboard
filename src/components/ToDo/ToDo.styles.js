@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledToDoSection = styled.section`
   grid-area: To-Do;
@@ -32,4 +32,4 @@ export const StyledToDoSection = styled.section`
   @media only screen and (max-width: 800px) {
     min-height: unset;
   }
-`
+`;

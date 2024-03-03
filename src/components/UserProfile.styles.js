@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledUserProfileSection = styled.section`
   grid-area: Profile;
@@ -17,7 +17,11 @@ export const StyledUserProfileSection = styled.section`
     justify-content: center;
     align-items: flex-end;
     width: 100%;
-    background: linear-gradient(32deg, rgba(190,115,191,1) 37%, rgba(37,195,245,1) 80%);
+    background: linear-gradient(
+      32deg,
+      rgba(190, 115, 191, 1) 37%,
+      rgba(37, 195, 245, 1) 80%
+    );
     height: 80px;
   }
 
@@ -58,4 +62,4 @@ export const StyledUserProfileSection = styled.section`
       }
     }
   }
-`
+`;

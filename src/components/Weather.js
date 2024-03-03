@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { StyledWeather } from "./Weather.styles";
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
 const options = {
@@ -19,8 +19,8 @@ function Weather() {
     const crd = pos.coords;
     setCoordinates({
       latitude: crd.latitude,
-      longitude: crd.longitude
-    })
+      longitude: crd.longitude,
+    });
   }
 
   function error(err) {
@@ -29,11 +29,13 @@ function Weather() {
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(success, error, options);
-  }, [])
+  }, []);
 
   useEffect(() => {
     if (coordinates) {
-      fetch(`https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=metric&exclude=hourly,daily,minutely&appid=${apiKey}`)
+      fetch(
+        `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.latitude}&lon=${coordinates.longitude}&units=metric&exclude=hourly,daily,minutely&appid=${apiKey}`
+      )
         .then((res) => {
           return res.json();
         })
@@ -41,30 +43,42 @@ function Weather() {
           setWeatherData(data.current);
         });
 
-      fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${coordinates.latitude}&lon=${coordinates.longitude}&limit=${5}&appid=${apiKey}`)
+      fetch(
+        `http://api.openweathermap.org/geo/1.0/reverse?lat=${
+          coordinates.latitude
+        }&lon=${coordinates.longitude}&limit=${5}&appid=${apiKey}`
+      )
         .then((res) => {
           return res.json();
         })
         .then((data) => {
-          setCityData(data[0])
+          setCityData(data[0]);
         });
 
       setIsLoading(false);
     }
-  }, [coordinates])
+  }, [coordinates]);
 
   // Handles the directory path for custom weather icons //
-  const svgDir = require.context('../assets/weather/');
+  const svgDir = require.context("../assets/weather/");
 
   return (
     <StyledWeather $loading={isLoading}>
       {!isLoading && weatherData && cityData ? (
         <>
-          <a href="https://openweathermap.org/" target="_blank" rel="noreferrer" className="external-link">
+          <a
+            href="https://openweathermap.org/"
+            target="_blank"
+            rel="noreferrer"
+            className="external-link"
+          >
             <OpenInNewIcon />
           </a>
           <div className="main-info">
-            <img src={svgDir(`./${weatherData.weather[0].icon}.svg`)} alt={weatherData.weather[0].id} />
+            <img
+              src={svgDir(`./${weatherData.weather[0].icon}.svg`)}
+              alt={weatherData.weather[0].id}
+            />
             <div className="city-info">
               <h2>{cityData.name}</h2>
               <small>{cityData.state}</small>
@@ -87,10 +101,10 @@ function Weather() {
           </div>
         </>
       ) : (
-        <div className="error">{!isLoading && 'There was an error'}</div>
+        <div className="error">{!isLoading && "There was an error"}</div>
       )}
     </StyledWeather>
-  )
+  );
 }
 
 export default Weather;

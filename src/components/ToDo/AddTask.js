@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import { useTasksDispatch } from '../../context/TasksContext'
-import AddIcon from '@mui/icons-material/Add';
-import { StyledAddItem, StyledAddButton } from './AddTask.styles';
+import { useState } from "react";
+import { useTasksDispatch } from "../../context/TasksContext";
+import AddIcon from "@mui/icons-material/Add";
+import { StyledAddItem, StyledAddButton } from "./AddTask.styles";
 
 export default function AddTask() {
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const [isAdd, setIsAdd] = useState(false);
   const dispatch = useTasksDispatch();
 
   function handleAddTask() {
-    setText('');
+    setText("");
     setIsAdd(false);
     dispatch({
-      type: 'added',
+      type: "added",
       id: nextId++,
       text: text,
     });
@@ -20,10 +20,8 @@ export default function AddTask() {
 
   if (!isAdd) {
     return (
-      <StyledAddButton onClick={() => setIsAdd(true)}>
-        Add Item
-      </StyledAddButton>
-    )
+      <StyledAddButton onClick={() => setIsAdd(true)}>Add Item</StyledAddButton>
+    );
   }
 
   return (
@@ -43,7 +41,7 @@ export default function AddTask() {
             handleAddTask();
           }
         }}
-        onChange={e => setText(e.target.value)}
+        onChange={(e) => setText(e.target.value)}
       />
     </StyledAddItem>
   );

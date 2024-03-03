@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledDashboard = styled.main`
   padding: 18px 18px;
@@ -39,7 +39,7 @@ export const StyledDashboard = styled.main`
     max-width: unset;
     padding-top: 30px;
   }
-`
+`;
 
 export const StyledGreeting = styled.div`
   padding: 0 8px;
@@ -55,24 +55,24 @@ export const StyledGreeting = styled.div`
   @media only screen and (max-width: 800px) {
     flex-direction: column-reverse;
   }
-`
+`;
 
 export const StyledDashboardContent = styled.div`
   display: grid;
   grid-gap: 20px;
 
-  grid-template-columns: 1fr 2fr; 
-  grid-template-rows: 1fr 1fr; 
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
 
-  grid-template-areas: 
+  grid-template-areas:
     "Profile To-Do"
-    "Weather To-Do"; 
+    "Weather To-Do";
 
   @media only screen and (max-width: 800px) {
     display: flex;
     flex-direction: column;
-    grid-template-columns: unset; 
-    grid-template-rows: unset; 
-    grid-template-areas:unset; 
+    grid-template-columns: unset;
+    grid-template-rows: unset;
+    grid-template-areas: unset;
   }
-`
+`;

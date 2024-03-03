@@ -1,10 +1,10 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledList = styled.ul`
   display: flex;
   flex-direction: column;
   list-style-type: none;
-`
+`;
 
 export const EmptyList = styled.div`
   min-height: 50px;
@@ -13,10 +13,10 @@ export const EmptyList = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 14px;
-`
+`;
 
 export const StyledItem = styled.div`
-  background-color: ${(props) => props.$done ? '#66E463' : '#F5F5F5'};
+  background-color: ${(props) => (props.$done ? "#66E463" : "#F5F5F5")};
   transition: 0.1s ease-in-out;
   margin-bottom: 12px;
 
@@ -73,29 +73,29 @@ export const StyledItem = styled.div`
     width: 300px;
     overflow: hidden;
 
-    text-decoration: ${(props) => props.$done ? 'line-through' : 'none'};
+    text-decoration: ${(props) => (props.$done ? "line-through" : "none")};
   }
-`
+`;
 
 export const ItemButton = styled.div`
-    display: flex;
-    justify-content: center;
-    margin-left: 4px;
-    opacity: 0.8;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-left: 4px;
+  opacity: 0.8;
+  cursor: pointer;
 
-    &:hover {
-      color: #000;
-    }
+  &:hover {
+    color: #000;
+  }
 
-    svg {
-      width: 24px;
-      height: 24px;
-    }
-`
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+`;
 
 export const StyledInput = styled.input`
   flex: 1;
   padding: 4px 6px;
   background-color: transparent;
-`
+`;

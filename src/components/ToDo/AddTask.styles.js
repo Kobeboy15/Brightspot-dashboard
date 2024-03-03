@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const StyledAddItem = styled.div`
   display: flex;
@@ -20,7 +20,7 @@ export const StyledAddItem = styled.div`
     border: 0;
     font-family: inherit;
   }
-`
+`;
 
 export const StyledAddButton = styled.button`
   display: flex;
@@ -34,4 +34,4 @@ export const StyledAddButton = styled.button`
   border: 0;
   border-radius: 4px;
   cursor: pointer;
-`
+`;
