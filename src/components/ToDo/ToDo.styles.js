@@ -20,6 +20,11 @@ export const StyledToDoSection = styled.section`
     span {
       font-weight: 700;
     }
+
+    @media only screen and (max-width: 800px) {
+      flex-direction: column;
+      grid-gap: 4px;
+    }
   }
 
   .list-container {

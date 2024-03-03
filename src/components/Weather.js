@@ -101,7 +101,9 @@ function Weather() {
           </div>
         </>
       ) : (
-        <div className="error">{!isLoading && "There was an error"}</div>
+        <div className="error">
+          {!isLoading && !weatherData && !cityData && "There was an error"}
+        </div>
       )}
     </StyledWeather>
   );
