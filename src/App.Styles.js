@@ -12,6 +12,18 @@ export const StyledContainer = styled.div`
   margin: auto;
   padding: 0 24px;
   text-align: center;
+  animation: fadeInApp 1.2s cubic-bezier(0.29, 0.005, 0.085, 1.01);
+
+  @keyframes fadeInApp {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   h1 {
     font-size: 32px;

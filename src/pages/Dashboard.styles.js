@@ -8,6 +8,18 @@ export const StyledDashboard = styled.main`
   max-width: 1000px;
   flex-direction: column;
   justify-content: center;
+  animation: fadeInDashboard 1.2s cubic-bezier(0.29, 0.005, 0.085, 1.01);
+
+  @keyframes fadeInDashboard {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
   .credits {
     display: flex;
