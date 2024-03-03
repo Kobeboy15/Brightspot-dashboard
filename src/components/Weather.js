@@ -44,7 +44,7 @@ function Weather() {
         });
 
       fetch(
-        `http://api.openweathermap.org/geo/1.0/reverse?lat=${
+        `https://api.openweathermap.org/geo/1.0/reverse?lat=${
           coordinates.latitude
         }&lon=${coordinates.longitude}&limit=${5}&appid=${apiKey}`
       )
