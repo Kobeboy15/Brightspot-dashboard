@@ -10,6 +10,7 @@ const options = {
 };
 
 function Weather() {
+  const [isGeoBlocked, setIsGeoBlocked] = useState(false);
   const [coordinates, setCoordinates] = useState(null);
   const [weatherData, setWeatherData] = useState(null);
   const [cityData, setCityData] = useState(null);
@@ -24,6 +25,7 @@ function Weather() {
   }
 
   function error(err) {
+    setIsGeoBlocked(true);
     console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 
@@ -61,6 +63,17 @@ function Weather() {
 
   // Handles the directory path for custom weather icons //
   const svgDir = require.context("../assets/weather/");
+
+  if (isGeoBlocked) {
+    return (
+      <StyledWeather>
+        <div className="blocked">
+          <h3>Location Blocked</h3>
+          <p>Please ALLOW location tracking to enable this feature</p>
+        </div>
+      </StyledWeather>
+    );
+  }
 
   return (
     <StyledWeather $loading={isLoading}>

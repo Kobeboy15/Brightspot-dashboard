@@ -142,4 +142,8 @@ export const StyledWeather = styled.section`
   .error {
     text-align: center;
   }
+
+  .blocked {
+    text-align: center;
+  }
 `;
