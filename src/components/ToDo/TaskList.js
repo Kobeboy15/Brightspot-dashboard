@@ -18,7 +18,7 @@ export default function TaskList() {
   return (
     <StyledList>
       {tasks
-        .sort((item) => item.done - !item.done)
+        .sort((a, b) => a.done - b.done)
         .map((task) => (
           <Task key={task.id} task={task} />
         ))}
