@@ -1,28 +1,20 @@
 import { Link } from "react-router-dom";
 import "./App.css";
-import { StyledContainer } from "./App.Styles";
+import { StyledContainer, StyledDashboardButton } from "./App.Styles";
 
 function App() {
-  const brightspotUrl = "https://www.getbrightspot.com/";
-
   return (
     <StyledContainer className="App">
       <h1>Welcome to my Dashboard Assignment</h1>
       <p>
-        This project aims to assess my proficiency in React fundamentals, state
-        management, and interaction with external APIs. This project, assigned
-        by{" "}
-        <a href={brightspotUrl} target="_blank" rel="noreferrer">
-          Brightspot
-        </a>
-        , involves developing a personal dashboard application utilizing
-        React.js. The application is designed to showcase a user's personal
-        information, a to-do list, and the current weather in their city. The
-        primary goal of this initiative is to evaluate my understanding and
-        skills in React fundamentals, effective state management, and the
-        ability to integrate and interact with external APIs.
+        This project involves creating a personal dashboard with React.js to
+        display user information, a to-do list, and the user's local weather. It
+        aims to assess my skills in React basics, state management, and API
+        integration.
       </p>
-      <Link to="/dashboard">Click to go dashboard</Link>
+      <Link to="/dashboard">
+        <StyledDashboardButton>View dashboard</StyledDashboardButton>
+      </Link>
     </StyledContainer>
   );
 }

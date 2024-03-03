@@ -23,10 +23,11 @@ export const StyledAddItem = styled.div`
 `;
 
 export const StyledAddButton = styled.button`
+  text-transform: uppercase;
   display: flex;
   background-color: #e4d8f5;
   color: #503894;
-  font-weight: 700;
+  font-weight: 600;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -34,4 +35,9 @@ export const StyledAddButton = styled.button`
   border: 0;
   border-radius: 4px;
   cursor: pointer;
+
+  &:hover {
+    background-color: #cdc2dc;
+    transition: 0.2s ease-in-out;
+  }
 `;
