@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+![N|Solid](https://github.com/Kobeboy15/Brightspot-dashboard/assets/23691843/77cd517c-b49a-41a7-af2f-7aa372137e6d)
+# React Personal Dashboard
+Build a personal dashboard application using React.js that displays a user's personal
+information, a to-do list, and the current weather in their city. This project aims to assess
+my proficiency in React fundamentals, state management, and interaction with external
+APIs.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Feel free to clone or fork it for your own personal use.
 
-## Available Scripts
+You can access it here as well:
+https://brightspot-dashboard.vercel.app/
 
-In the project directory, you can run:
+## Installation
+| Tools | Version |
+| ------ | ------ |
+| npm | 9.6.3 |
+| node | 19.9.0 |
+| React | 18.2.0 |
+Install the dependencies and start the server.
+```sh
+cd Brightspot-dashboard
+npm install
+npm start
+```
+For running tests...
 
-### `npm start`
+```sh
+npm run test
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Design decisions and Structure
+For the assignment, I was tasked with creating a personal dashboard. This dashboard is meant to display key information or summaries in one spot. The main aim was to enhance what the user would interact with most. That's why I chose to highlight the ToDo list as a significant part of the dashboard. I opted for a smaller, side panel layout for the user profile and weather sections because they mainly show information and require minimal interaction.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+On mobile screens, the To-Do list is shown above the weather because it's more important for users to interact with. You might wonder why I didn't put the user profile under the To-Do list. Functionally, it could work, but it's not what most users expect. We usually read from left to right and from top to bottom. This is how many people, especially in the West, process information. So, putting the user profile at the top left makes sense because it's the first thing you see, followed by the To-Do list to its right.
 
-### `npm test`
+The aim for mobile was to make sure you can see the To-Do list right away, without needing to scroll or having it hidden by the user profile.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I explored a variety of designs and themes, drawing inspiration from different sources and adding my personal touch to suit our project's needs. My goal was to create something both enjoyable and useful for anyone to use.
 
-### `npm run build`
+### Checklist:
+- Set up with Create React App
+- Desktop & Mobile Responsive
+- User Profile displays Name, Email, and a Profile picture
+- User infomation is passed down as prop, but information is static.
+- To-Do List Features (Add, Edit, Mark as Complete, and Delete)
+- List of Tasks is handled by state and context API
+- Each task has a checkbox and delete button
+- Form to add new items to task list
+- Weather component asks user to allow geolocation data in order to display current user's location weather data
+- Uses OpenWeather API
+- Requires user to allow location in order to input
+- Styling was handled with Styled-Components
+- Research and optimized design to be clean and user-friendly, as well as responsive.
+- Implemented Context API for Task List
+- Incorporated unit tests with the React Testing Library for each of the core components
+- Incoprated a basic route, with an Index page, Dashboard page, and a simple 404 page
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
