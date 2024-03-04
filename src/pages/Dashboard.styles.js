@@ -66,6 +66,10 @@ export const StyledGreeting = styled.div`
 
   @media only screen and (max-width: 800px) {
     flex-direction: column-reverse;
+
+    h2 {
+      font-size: 24px;
+    }
   }
 `;
 
