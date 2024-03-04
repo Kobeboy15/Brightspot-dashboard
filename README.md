@@ -16,6 +16,7 @@ https://brightspot-dashboard.vercel.app/
 | npm | 9.6.3 |
 | node | 19.9.0 |
 | React | 18.2.0 |
+
 Install the dependencies and start the server.
 ```sh
 cd Brightspot-dashboard
