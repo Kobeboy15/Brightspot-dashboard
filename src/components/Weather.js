@@ -26,7 +26,7 @@ function Weather() {
 
   function error(err) {
     setIsGeoBlocked(true);
-    console.warn(`ERROR(${err.code}): ${err.message}`);
+    // console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 
   useEffect(() => {
@@ -61,9 +61,6 @@ function Weather() {
     }
   }, [coordinates]);
 
-  // Handles the directory path for custom weather icons //
-  const svgDir = require.context("../assets/weather/");
-
   if (isGeoBlocked) {
     return (
       <StyledWeather>
@@ -89,7 +86,7 @@ function Weather() {
           </a>
           <div className="main-info">
             <img
-              src={svgDir(`./${weatherData.weather[0].icon}.svg`)}
+              src={`/weather/${weatherData.weather[0].icon}.svg`}
               alt={weatherData.weather[0].id}
             />
             <div className="city-info">
@@ -99,15 +96,15 @@ function Weather() {
             <h1 className="temp-info">{weatherData.temp}˚C</h1>
           </div>
           <div className="additional-info">
-            <div>
+            <div className="info-wind_speed">
               <p>{weatherData.wind_speed}mph</p>
               <small>Wind</small>
             </div>
-            <div>
+            <div className="info-humidity">
               <p>{weatherData.humidity}%</p>
               <small>Humidity</small>
             </div>
-            <div>
+            <div className="info-feels_like">
               <p>{weatherData.feels_like}˚C</p>
               <small>Feeling</small>
             </div>

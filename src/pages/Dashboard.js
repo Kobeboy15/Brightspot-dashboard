@@ -16,7 +16,7 @@ import {
 const portfolioLink = "https://www.kobemichael.works/";
 
 export default function Dashboard() {
-  const [user] = useState("Vikram Tawahkehs");
+  const [user] = useState("Vikram");
 
   return (
     <StyledDashboard>

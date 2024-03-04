@@ -4,7 +4,7 @@ const handleBackgroundColor = () => {
   const now = new Date();
   const hour = now.getHours();
 
-  if (hour > 6 || (hour >= 12 && hour < 18)) {
+  if (hour > 6 && hour < 18) {
     return "linear-gradient(340deg, rgba(72,113,243,1) 0%, rgba(74,189,251,1) 56%)";
   } else {
     return "linear-gradient(340deg, rgba(21,20,60,1) 0%, rgba(58,56,105,1) 45%);";

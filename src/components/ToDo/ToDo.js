@@ -12,7 +12,9 @@ export default function ToDo() {
         <h1>Things to do!</h1>
         <p>
           You have{" "}
-          <span>{tasks && tasks.filter((task) => !task.done).length}</span>{" "}
+          <span data-testid="task_amount">
+            {tasks && tasks.filter((task) => !task.done).length}
+          </span>{" "}
           tasks remaining
         </p>
       </div>

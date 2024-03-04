@@ -76,6 +76,7 @@ function Task({ task }) {
         <>
           {!task.done && (
             <ItemButton
+              data-testid="edit_btn"
               onClick={() => {
                 setTaskText(task.text);
                 setIsEditing(true);
@@ -85,6 +86,7 @@ function Task({ task }) {
             </ItemButton>
           )}
           <ItemButton
+            data-testid="delete_btn"
             onClick={() => {
               setIsDeleted(true);
               setTimeout(() => {
@@ -101,6 +103,7 @@ function Task({ task }) {
       ) : (
         <>
           <ItemButton
+            data-testid="save_btn"
             onClick={() => {
               dispatch({
                 type: "changed",
