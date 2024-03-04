@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
 import "./App.css";
+import ToDoLogo from "./assets/todo.svg";
 import { StyledContainer, StyledDashboardButton } from "./App.Styles";
 
 function App() {
   return (
     <StyledContainer className="App">
+      <img src={ToDoLogo} alt="checklist-person" />
       <h1>Welcome to my Dashboard Assignment</h1>
       <p>
         This project involves creating a personal dashboard with React.js to

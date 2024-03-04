@@ -25,6 +25,11 @@ export const StyledContainer = styled.div`
     }
   }
 
+  img {
+    width: 250px;
+    margin-bottom: 12px;
+  }
+
   h1 {
     font-size: 32px;
     font-weight: 700;

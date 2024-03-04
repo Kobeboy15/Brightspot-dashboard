@@ -5,6 +5,7 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Dashboard from "./pages/Dashboard";
+import NotFound from "./pages/NotFound";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,7 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
