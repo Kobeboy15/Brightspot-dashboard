@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import ErrorImg from "../assets/404.svg";
-import StyledMain from "./NotFound.styles";
+import { StyledMain } from "./NotFound.styles";
 
 export default function NotFound() {
   return (
